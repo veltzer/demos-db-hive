@@ -19,6 +19,7 @@ hive\
 	-hiveconf mapred.job.tracker=local\
 	-hiveconf fs.default.name=file://$PWD/dfs\
 	-hiveconf hive.metastore.warehouse.dir=file://$PWD/dfs/warehouse\
-	-f script.sql
+	-f script.sql\
+	--verbose
 #	--silent\
 #	--hiveconf log4j.configuration=file://$PWD/../log4j.properties
