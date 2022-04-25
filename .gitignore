@@ -1,3 +1,4 @@
-derby.log
-metastore_db/
-dfs/
+/derby.log
+/metastore_db/
+/dfs/
+$.stamp
