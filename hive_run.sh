@@ -1,3 +1,4 @@
+#!/bin/bash -eu
 echo "remove the old metastore"
 \rm -rf derby.log metastore_db
 echo "create the new metastore"
@@ -17,8 +18,8 @@ fi
 hive\
 	-hiveconf hive.root.logger=ERROR,console\
 	-hiveconf mapred.job.tracker=local\
-	-hiveconf fs.default.name=file://$PWD/dfs\
-	-hiveconf hive.metastore.warehouse.dir=file://$PWD/dfs/warehouse\
+	-hiveconf "fs.default.name=file://${PWD}/dfs"\
+	-hiveconf "hive.metastore.warehouse.dir=file://${PWD}/dfs/warehouse"\
 	-f script.sql\
 	--verbose
 #	--silent\
