@@ -18,5 +18,5 @@ src_files = ["README.md"]
 
 # ─── shell ───────────────────────────────────────────────────────────────────
 
-[processor.checker.shellcheck]
+[processor.checker.ishellcheck]
 src_files = ["hive_clean.sh", "hive_run.sh"]
