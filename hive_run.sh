@@ -7,7 +7,7 @@ echo "remove the old filesystem"
 \rm -rf dfs
 echo "create the new filesystem"
 mkdir dfs
-if [ -d predata ]
+if [[ -d predata ]]
 then
 	echo "copying predata"
 	cp -r predata/* dfs/warehouse
